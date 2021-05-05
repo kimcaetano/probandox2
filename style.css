@@ -1,0 +1,31 @@
+/* GRID LAYOUT*/
+/*PADRE contenido*/
+#contenido{
+    width: 1366px;
+    display: grid; 
+    grid-template-columns: 80px 1fr 80px;
+    grid-template-rows: 100px auto 100px;
+
+    grid-template-areas:
+    ". arriba arriba"
+    "main main main"
+    ". copy copy";
+}
+
+
+/* HIJOS header, main, footer*/
+header{
+    grid-area: arriba;
+}
+main{
+    grid-area: main;
+}
+footer{
+    grid-area: copy;
+}
+
+/*ESTILOS*/
+header, main, footer{
+    background-color: rgb(131, 131, 131);
+    border: 2px solid red;
+}
